@@ -2,18 +2,10 @@
 
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
-import { Particles } from "@/components/ui/particles";
 
 export function Hero() {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-16">
-      <Particles
-        className="absolute inset-0"
-        quantity={100}
-        ease={80}
-        color="#ef4444"
-        refresh
-      />
       <div className="relative z-10 text-center space-y-8">
         <AnimatedGradientText className="mb-4">
           <span className="text-sm">Trade Memecoins with Leverage</span>
