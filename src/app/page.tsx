@@ -7,6 +7,7 @@ import { Stats } from "@/components/sections/stats";
 import { TrendingPairs } from "@/components/sections/trending-pairs";
 import { FeatureCards } from "@/components/sections/feature-cards";
 import { HowItWorks } from "@/components/sections/how-it-works";
+import { TrustBadges } from "@/components/sections/trust-badges";
 import { FAQ } from "@/components/sections/faq";
 import { Footer } from "@/components/sections/footer";
 
@@ -23,6 +24,7 @@ export default function Home() {
       <TrendingPairs />
       <FeatureCards />
       <HowItWorks />
+      <TrustBadges />
       <FAQ />
       <Footer />
     </main>

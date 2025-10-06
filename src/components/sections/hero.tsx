@@ -1,37 +1,45 @@
 'use client';
 
+import { motion } from "framer-motion";
+import { LampContainer } from "@/components/ui/lamp";
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
+import { GlassButton } from "@/components/ui/liquid-glass";
 
 export function Hero() {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-16">
-      <div className="relative z-10 text-center space-y-8">
+    <LampContainer className="bg-transparent">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="text-center space-y-8"
+      >
         <AnimatedGradientText className="mb-4">
           <span className="text-sm">Trade Memecoins with Leverage</span>
         </AnimatedGradientText>
 
-        <h1 className="text-7xl font-bold bg-gradient-to-r from-mesh-gradient-red via-purple-500 to-mesh-gradient-blue bg-clip-text text-transparent animate-gradient">
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-purple-400 via-purple-500 to-blue-500 bg-clip-text text-transparent">
           MeshX
         </h1>
 
-        <p className="text-2xl text-mesh-text-secondary max-w-2xl">
+        <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto">
           Perpetual Futures for Emerging Memecoins
         </p>
 
         <div className="flex gap-4 justify-center pt-8">
-          <ShimmerButton
-            background="linear-gradient(to right, rgb(239, 68, 68), rgb(59, 130, 246))"
-            className="px-8 py-4 text-base font-semibold"
-          >
-            Launch App
-          </ShimmerButton>
+          <GlassButton href="/trade">
+            <div className="text-base text-white">Launch App</div>
+          </GlassButton>
 
-          <button className="px-8 py-4 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/5 transition-colors backdrop-blur-sm">
-            View Pairs
-          </button>
+          <GlassButton href="#trending">
+            <div className="text-base text-white">View Pairs</div>
+          </GlassButton>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </LampContainer>
   );
 }

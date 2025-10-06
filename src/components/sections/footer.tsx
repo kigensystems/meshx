@@ -4,11 +4,11 @@ import { Twitter, Github, Send } from 'lucide-react';
 import { Marquee } from '@/components/ui/marquee';
 
 const stats = [
-  "🔥 $50M+ Trading Volume",
-  "⚡ 10K+ Active Traders",
-  "🚀 100+ Memecoin Pairs",
-  "💎 Community Owned",
-  "🛡️ Audited Smart Contracts",
+  "$50M+ Trading Volume",
+  "10K+ Active Traders",
+  "100+ Memecoin Pairs",
+  "Community Owned",
+  "Audited Smart Contracts",
 ];
 
 export function Footer() {
@@ -55,25 +55,48 @@ export function Footer() {
 
           <div>
             <h4 className="text-white font-semibold mb-4">Community</h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mb-6">
               <a
-                href="#"
-                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-purple-500/20 border border-white/10 hover:border-purple-500/50 flex items-center justify-center transition-all"
               >
                 <Twitter className="w-5 h-5 text-white" />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all"
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-purple-500/20 border border-white/10 hover:border-purple-500/50 flex items-center justify-center transition-all"
               >
                 <Github className="w-5 h-5 text-white" />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all"
+                href="https://t.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-purple-500/20 border border-white/10 hover:border-purple-500/50 flex items-center justify-center transition-all"
               >
                 <Send className="w-5 h-5 text-white" />
               </a>
+            </div>
+
+            <div className="mt-6">
+              <h4 className="text-white font-semibold mb-3 text-sm">Newsletter</h4>
+              <form className="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="your@email.com"
+                  className="flex-1 px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-500 focus:outline-none focus:border-purple-500/50 transition-colors"
+                />
+                <button
+                  type="submit"
+                  className="px-4 py-2 text-sm bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity"
+                >
+                  Join
+                </button>
+              </form>
             </div>
           </div>
         </div>
